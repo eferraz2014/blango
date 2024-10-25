@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-frryn#ar$p*7py3t&-cw+jh2@kj3ina5sc6&u)ecf=)+=76%!(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['rovernominal-strangecostume-8000.codio.io',]
+ALLOWED_HOSTS = []
 
 
 # Application definition
