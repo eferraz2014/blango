@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
+<<<<<<< HEAD
     <h2>{{ post.title }}</h2>
     <div class="row">
         <div class="col">
@@ -9,4 +10,17 @@
     {% row %}
         {% col %}  {% recent_posts post %}  {% endcol %}
     {% endrow %}
+=======
+<h2>{{ post.title }}</h2>
+<div class="row">
+    <div class="col">
+        {% include "blog/post-byline.html" %}
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        {{ post.content|safe }}
+    </div>
+</div>
+>>>>>>> 69ed0d31d82a79fb166c8d55c2d2da9b18d60419
 {% endblock %}
