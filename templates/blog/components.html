@@ -73,4 +73,20 @@
         </div>
     </div>
 </nav>
+
+
+
+<!-- 
+<div class="row">
+    <div class="col">
+        {{ post.content|safe }}
+    </div>
+</div>
+existing code here -->
+{% row %}
+    {% col %}
+        {% recent_posts post %}
+    {% endcol %}
+{% endrow %}
+
 {% endblock %}

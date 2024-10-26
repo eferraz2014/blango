@@ -29,5 +29,10 @@ def author_details(author,current_user=None):
   else:
     prefix = ""
     suffix = ""
-
   return format_html('{}{}{}', prefix, name, suffix)
+
+@register.inclusion_tag("blog/post-list.html")
+def recent_posts(post):
+  posts = Post.objects.exclude(pk=post.pk)[:5]
+  return {"title": "Recent Posts", "posts": posts}
+
