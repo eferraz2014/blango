@@ -9,8 +9,16 @@ https://docs.djangoproject.com/en/3.2/howto/deployment/wsgi/
 
 import os
 
-from django.core.wsgi import get_wsgi_application
-
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'blango.settings')
-
+os.environ.setdefault("DJANGO_CONFIGURATION", "Prod")
+from blango.settings import Dev
+from configurations.wsgi import get_wsgi_application
+from configurations import values
 application = get_wsgi_application()
+
+class Prod(Dev):
+  DEBUG = False
+  SECRET_KEY = values.SecretValue()
+  ALLOWED_HOSTS = values.ListValue(["localhost", "0.0.0.0", ".codio.io"])
+
+

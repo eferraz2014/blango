@@ -18,10 +18,10 @@ from django.urls import path
 import blog.views as v
 urlpatterns = [
     path('', v.index),
-<<<<<<< HEAD
     path("post/<slug>/",v.post_detail,name="blog-post-detail"),
-=======
-    path("post/<slug>/",v.post_detail,name="blog-post-detail")
->>>>>>> 69ed0d31d82a79fb166c8d55c2d2da9b18d60419
-    path('admin/', admin.site.urls),
+    path("post/<slug>/",v.post_detail,name="blog-post-detail"),
+#    path('admin/', admin.site.urls),
 ]
+
+from django.conf import settings
+print(f"Time zone: {settings.TIME_ZONE}")
