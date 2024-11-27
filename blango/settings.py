@@ -27,7 +27,7 @@ class Dev(Configuration):
 
     # SECURITY WARNING: don't run with debug turned on in production!
     DEBUG = values.BooleanValue(True)
-    ALLOWED_HOSTS = values.ListValue(['0.0.0.0','localhost','127.0.0.1'])
+    ALLOWED_HOSTS = values.ListValue(['0.0.0.0','localhost','127.0.0.1','peopleabraham-vitaminsponsor-8000.codio.io'])
 
     # Application definition
     INSTALLED_APPS = [
